@@ -1,6 +1,6 @@
 body {
-  background: #FFFFFF;
-  color: #263238;
+  background: #FDF6E3;
+  color: #657B83;
   font-family: 'Source Code Pro', monospace;
   font-size: .8em;
   display: flex;
@@ -14,7 +14,7 @@ h1 {
   margin: 0;
 }
 h2 {
-  color: #455A64;
+  color: #586E75;
   font-weight: 300;
   margin: 0 0 .5em 0;
 }
@@ -22,14 +22,14 @@ h2 {
   margin: 0 0 1.5em 0;
 }
 .links a {
-  color: #263238;
+  color: #657B83;
   margin: auto 1em auto 0;
 }
 .intro {
   margin: 0 0 2em 0;
 }
 .intro a {
-  color: #2196F3;
+  color: #268BD2;
   text-decoration: none;
 }
 .intro .title {
@@ -55,7 +55,7 @@ h2 {
   margin: 0 0 2em 0;
 }
 .changelog a {
-  color: #2196F3;
+  color: #268BD2;
   text-decoration: none;
 }
 .changelog .title {
@@ -82,7 +82,7 @@ h2 {
   justify-content: flex-start;
 }
 .changelog li .left {
-  color: #455A64;
+  color: #586E75;
   font-weight: 300;
   min-width: 200px;
 }
@@ -122,7 +122,7 @@ h2 {
   margin: 0 0 2em 0;
 }
 .updates a {
-  color: #2196F3;
+  color: #268BD2;
   text-decoration: none;
 }
 .updates .title {
@@ -155,7 +155,7 @@ h2 {
   margin: 0 0 2em 0;
 }
 .bio a {
-  color: #2196F3;
+  color: #268BD2;
   text-decoration: none;
 }
 .bio .title {
@@ -178,7 +178,7 @@ h2 {
   margin: 2em 0;
 }
 .bio .exp {
-  background: #EEEEEE;
+  background: #EEE8D5;
   line-height: 1.8em;
   margin: 2em 0 0 0;
   padding: 0.8em 1.2em;
@@ -201,7 +201,7 @@ h2 {
   margin: 0 0 2em 0;
 }
 .end a {
-  color: #2196F3;
+  color: #268BD2;
   text-decoration: none;
 }
 .end .title {
@@ -224,24 +224,24 @@ h2 {
   margin: 2em 0;
 }
 .job .left:before {
-  background: #4CAF50;
+  background: #859900;
 }
 .job em {
-  color: #4CAF50;
+  color: #859900;
   font-style: normal;
 }
 .event .left:before {
-  background: #EB4888;
+  background: #D33682;
 }
 .event em {
-  color: #EB4888;
+  color: #D33682;
   font-style: normal;
 }
 .fun .left:before {
-  background: #2196F3;
+  background: #268BD2;
 }
 .fun em {
-  color: #2196F3;
+  color: #268BD2;
   font-style: normal;
 }
 .flash {
