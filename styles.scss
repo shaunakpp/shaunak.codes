@@ -1,0 +1,269 @@
+@import 'solarized';
+@mixin link-with-color($link-color){
+  a {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: .8em;
+  display: flex;
+  justify-content: center;
+  background: $base3;
+  color: $base00;
+}
+.container {
+  max-width: 840px;
+}
+h1 {
+  font-weight: 400;
+  margin: 0;
+}
+h2 {
+  font-weight: 300;
+  margin: 0 0 .5em 0;
+}
+
+.links {
+  margin: 0 0 1.5em 0;
+  a {
+    margin: auto 1em auto 0;
+  }
+}
+
+.intro {
+  margin: 0 0 2em 0;
+  @include link-with-color($blue);
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+}
+.changelog {
+  margin: 0 0 2em 0;
+  @include link-with-color($blue);
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+  li {
+    display: flex;
+    justify-content: flex-start;
+    .left {
+      font-weight: 300;
+      min-width: 18em;
+    }
+    .desc {
+      display: flex;
+      flex-direction: column;
+      .info {
+        visibility: hidden;
+        max-height: 0;
+        transition: visibility 0s, max-height 0.5s linear;
+      }
+      .desc-points li{
+        margin-top: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .desc:hover .info {
+      visibility: visible;
+      max-height: 100px;
+      transition: max-height 0.5s linear;
+    }
+    .left:before {
+      content: '';
+      display: inline-block;
+      width: .7em;
+      height: .7em;
+      border-radius: 100%;
+      margin: 0 2em 0 0;
+    }
+  }
+  .loading {
+    animation: blinker 1s linear infinite;
+    margin: 1em 0 0 0;
+    .hide {
+      display: none;
+    }
+  }
+}
+.updates {
+  margin: 0 0 2em 0;
+  @include link-with-color($blue);
+
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+  .loading {
+    animation: blinker 1s linear infinite;
+    margin: 1em 0 0 0;
+    .hide {
+      display: none;
+    }
+  }
+}
+.bio {
+  margin: 0 0 2em 0;
+  @include link-with-color($blue);
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+  .exp {
+    background: $base2;
+    line-height: 1.8em;
+    margin: 2em 0 0 0;
+    padding: 0.8em 1.2em;
+  }
+}
+
+.expand {
+  .title {
+    cursor: pointer;
+  }
+  .title:before {
+    content: '[-] ';
+  }
+  .exp {
+    display: block;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.0;
+  }
+}
+
+.end {
+  margin: 0 0 2em 0;
+  @include link-with-color($blue);
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+}
+
+
+.job {
+  .left:before {
+    background: $green;
+  }
+  em {
+    color: $green;
+    font-style: normal;
+  }
+}
+
+.event {
+  .left:before {
+    background: $magenta;
+  }
+  em {
+    color: $magenta;
+    font-style: normal;
+  }
+}
+
+.fun {
+  .left:before {
+    background: $blue;
+  }
+  em {
+    color: $blue;
+    font-style: normal;
+  }
+}
+
+.flash {
+  color: $blue !important;
+}
+
+@media (max-width: 600px) {
+  .changelog li .left {
+    min-width: 160px;
+  }
+  .links a {
+    margin: auto 1.5em auto 0;
+  }
+}
