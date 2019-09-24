@@ -12,7 +12,6 @@ function expandGroups(event) {
     }, false);
   });
 }
-// get all the contents jazz
 (function () {
   window.addEventListener('load', function() {
     expandGroups('click');
