@@ -1,237 +1,316 @@
 /* light is default mode, so pair with general html definition */
 html, .light {
   background-color: #fdf6e3;
-  color: #657b83; }
-  html *, .light * {
-    color: #657b83; }
-  html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-    color: #586e75;
-    border-color: #657b83; }
-  html .bio .exp, .light .bio .exp {
-    background: #eee8d5; }
-  html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
-    color: #268bd2; }
+  color: #073642;
+}
+html *, .light * {
+  color: #073642;
+}
+html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html .bio .exp, .light .bio .exp {
+  background: #eee8d5;
+}
+html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
+  color: #268bd2;
+}
 
 .dark {
   background-color: #002b36;
-  color: #839496; }
-  .dark * {
-    color: #839496; }
-  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    color: #93a1a1;
-    border-color: #839496; }
-  .dark .bio .exp {
-    background: #073642; }
-  .dark a, .dark a:active, .dark a:visited, .dark code.url {
-    color: #268bd2; }
-
-html * {
-  color-profile: sRGB;
-  rendering-intent: auto; }
+  color: #eee8d5;
+}
+.dark * {
+  color: #eee8d5;
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #93a1a1;
+  border-color: #839496;
+}
+.dark .bio .exp {
+  background: #073642;
+}
+.dark a, .dark a:active, .dark a:visited, .dark code.url {
+  color: #268bd2;
+}
 
 body {
-  font-family: 'Source Code Pro', monospace;
-  font-size: .8em;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
   display: flex;
   justify-content: center;
   background: #fdf6e3;
-  color: #657b83; }
+  color: #657b83;
+}
 
 .container {
-  max-width: 840px; }
+  max-width: 840px;
+}
 
 h1 {
   font-weight: 400;
-  margin: 0; }
+  margin: 0;
+}
 
 h2 {
   font-weight: 300;
-  margin: 0 0 .5em 0; }
+  margin: 0 0 0.5em 0;
+}
 
 .links {
-  margin: 0 0 1.5em 0; }
-  .links a {
-    margin: auto 1em auto 0; }
+  margin: 0 0 1.5em 0;
+}
+.links a {
+  margin: auto 1em auto 0;
+}
+.links a {
+  color: #268bd2;
+  text-decoration: none;
+}
 
 .intro {
-  margin: 0 0 2em 0; }
-  .intro a {
-    color: #268bd2;
-    text-decoration: none; }
-  .intro .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0; }
-  .intro .title:before {
-    content: '[+] '; }
-  .intro .exp {
-    display: none; }
-  .intro ul {
-    list-style-type: none;
-    padding: 0; }
-    .intro ul li {
-      margin: 2em 0; }
+  margin: 0 0 2em 0;
+}
+.intro a {
+  color: #268bd2;
+  text-decoration: none;
+}
+.intro .title {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+.intro .title:before {
+  content: "[+] ";
+}
+.intro .exp {
+  display: none;
+}
+.intro ul {
+  list-style-type: none;
+  padding: 0;
+}
+.intro ul li {
+  margin: 2em 0;
+}
 
 .changelog {
-  margin: 0 0 2em 0; }
-  .changelog a {
-    color: #268bd2;
-    text-decoration: none; }
-  .changelog .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0; }
-  .changelog .title:before {
-    content: '[+] '; }
-  .changelog .exp {
-    display: none; }
-  .changelog ul {
-    list-style-type: none;
-    padding: 0; }
-    .changelog ul li {
-      margin: 2em 0; }
-  .changelog li {
-    display: flex;
-    justify-content: flex-start; }
-    .changelog li .left {
-      font-weight: 300;
-      min-width: 18em; }
-    .changelog li .desc {
-      display: flex;
-      flex-direction: column; }
-      .changelog li .desc .info {
-        visibility: hidden;
-        max-height: 0;
-        transition: visibility 0s, max-height 0.5s linear; }
-      .changelog li .desc .desc-points li {
-        margin-top: 0; }
-      .changelog li .desc p {
-        margin: 0; }
-    .changelog li .desc:hover .info {
-      visibility: visible;
-      max-height: 100px;
-      transition: max-height 0.5s linear; }
-    .changelog li .left:before {
-      content: '';
-      display: inline-block;
-      width: .7em;
-      height: .7em;
-      border-radius: 100%;
-      margin: 0 2em 0 0; }
-  .changelog .loading {
-    animation: blinker 1s linear infinite;
-    margin: 1em 0 0 0; }
-    .changelog .loading .hide {
-      display: none; }
+  margin: 0 0 2em 0;
+}
+.changelog a {
+  color: #268bd2;
+  text-decoration: none;
+}
+.changelog .title {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+.changelog .title:before {
+  content: "[+] ";
+}
+.changelog .exp {
+  display: none;
+}
+.changelog ul {
+  list-style-type: none;
+  padding: 0;
+}
+.changelog ul li {
+  margin: 2em 0;
+}
+.changelog li {
+  display: flex;
+  justify-content: flex-start;
+}
+.changelog li .left {
+  font-weight: 300;
+  min-width: 18em;
+}
+.changelog li .desc {
+  display: flex;
+  flex-direction: column;
+}
+.changelog li .desc .info {
+  visibility: hidden;
+  max-height: 0;
+  transition: visibility 0s, max-height 0.5s linear;
+}
+.changelog li .desc .desc-points li {
+  margin-top: 0;
+}
+.changelog li .desc p {
+  margin: 0;
+}
+.changelog li .desc:hover .info {
+  visibility: visible;
+  max-height: 100px;
+  transition: max-height 0.5s linear;
+}
+.changelog li .left:before {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 100%;
+  margin: 0 2em 0 0;
+}
+.changelog .loading {
+  animation: blinker 1s linear infinite;
+  margin: 1em 0 0 0;
+}
+.changelog .loading .hide {
+  display: none;
+}
 
 .updates {
-  margin: 0 0 2em 0; }
-  .updates a {
-    color: #268bd2;
-    text-decoration: none; }
-  .updates .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0; }
-  .updates .title:before {
-    content: '[+] '; }
-  .updates .exp {
-    display: none; }
-  .updates ul {
-    list-style-type: none;
-    padding: 0; }
-    .updates ul li {
-      margin: 2em 0; }
-  .updates .loading {
-    animation: blinker 1s linear infinite;
-    margin: 1em 0 0 0; }
-    .updates .loading .hide {
-      display: none; }
+  margin: 0 0 2em 0;
+}
+.updates a {
+  color: #268bd2;
+  text-decoration: none;
+}
+.updates .title {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+.updates .title:before {
+  content: "[+] ";
+}
+.updates .exp {
+  display: none;
+}
+.updates ul {
+  list-style-type: none;
+  padding: 0;
+}
+.updates ul li {
+  margin: 2em 0;
+}
+.updates .loading {
+  animation: blinker 1s linear infinite;
+  margin: 1em 0 0 0;
+}
+.updates .loading .hide {
+  display: none;
+}
 
 .bio {
-  margin: 0 0 2em 0; }
-  .bio a {
-    color: #268bd2;
-    text-decoration: none; }
-  .bio .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0; }
-  .bio .title:before {
-    content: '[+] '; }
-  .bio .exp {
-    display: none; }
-  .bio ul {
-    list-style-type: none;
-    padding: 0; }
-    .bio ul li {
-      margin: 2em 0; }
-  .bio .exp {
-    background: #eee8d5;
-    line-height: 1.8em;
-    margin: 2em 0 0 0;
-    padding: 0.8em 1.2em; }
+  margin: 0 0 2em 0;
+}
+.bio a {
+  color: #268bd2;
+  text-decoration: none;
+}
+.bio .title {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+.bio .title:before {
+  content: "[+] ";
+}
+.bio .exp {
+  display: none;
+}
+.bio ul {
+  list-style-type: none;
+  padding: 0;
+}
+.bio ul li {
+  margin: 2em 0;
+}
+.bio .exp {
+  background: #eee8d5;
+  line-height: 1.8em;
+  margin: 2em 0 0 0;
+  padding: 0.8em 1.2em;
+}
 
 .expand .title {
-  cursor: pointer; }
+  cursor: pointer;
+}
 .expand .title:before {
-  content: '[-] '; }
+  content: "[-] ";
+}
 .expand .exp {
-  display: block; }
+  display: block;
+}
 
 @keyframes blinker {
   50% {
-    opacity: 0.0; } }
+    opacity: 0;
+  }
+}
 .end {
-  margin: 0 0 2em 0; }
-  .end a {
-    color: #268bd2;
-    text-decoration: none; }
-  .end .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0; }
-  .end .title:before {
-    content: '[+] '; }
-  .end .exp {
-    display: none; }
-  .end ul {
-    list-style-type: none;
-    padding: 0; }
-    .end ul li {
-      margin: 2em 0; }
+  margin: 0 0 2em 0;
+}
+.end a {
+  color: #268bd2;
+  text-decoration: none;
+}
+.end .title {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+.end .title:before {
+  content: "[+] ";
+}
+.end .exp {
+  display: none;
+}
+.end ul {
+  list-style-type: none;
+  padding: 0;
+}
+.end ul li {
+  margin: 2em 0;
+}
 
 .job .left:before {
-  background: #859900; }
+  background: #859900;
+}
 .job em {
   color: #859900;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .event .left:before {
-  background: #d33682; }
+  background: #d33682;
+}
 .event em {
   color: #d33682;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .fun .left:before {
-  background: #268bd2; }
+  background: #268bd2;
+}
 .fun em {
   color: #268bd2;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .flash {
-  color: #268bd2 !important; }
+  color: #268bd2 !important;
+}
 
 @media (max-width: 600px) {
   .changelog li .left {
-    min-width: 160px; }
+    min-width: 160px;
+  }
 
   .links a {
-    margin: auto 1.5em auto 0; } }
+    margin: auto 1.5em auto 0;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

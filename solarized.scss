@@ -17,8 +17,8 @@ $green:     #859900;
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3)
 {
     background-color:$rebase03;
-    color:$rebase0;
-    * { color:$rebase0; }
+    color:$rebase2;
+    * { color:$rebase2; }
     h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
     .bio .exp { background: $rebase02;}
     a, a:active, a:visited, code.url { color: $blue; }
@@ -29,7 +29,7 @@ $green:     #859900;
 /* light is default mode, so pair with general html definition */
 html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
 .dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
-html * {
-    color-profile: sRGB;
-    rendering-intent: auto;
-}
+// html * {
+//     color-profile: sRGB;
+//     rendering-intent: auto;
+// }

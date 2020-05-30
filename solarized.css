@@ -1,28 +1,38 @@
 /* light is default mode, so pair with general html definition */
 html, .light {
   background-color: #fdf6e3;
-  color: #657b83; }
-  html *, .light * {
-    color: #657b83; }
-  html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-    color: #586e75;
-    border-color: #657b83; }
-  html a, html a:active, html a:visited, .light a, .light a:active, .light a:visited {
-    color: #586e75; }
+  color: #073642;
+}
+html *, .light * {
+  color: #073642;
+}
+html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html .bio .exp, .light .bio .exp {
+  background: #eee8d5;
+}
+html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
+  color: #268bd2;
+}
 
 .dark {
   background-color: #002b36;
-  color: #839496; }
-  .dark * {
-    color: #839496; }
-  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    color: #93a1a1;
-    border-color: #839496; }
-  .dark a, .dark a:active, .dark a:visited {
-    color: #93a1a1; }
-
-html * {
-  color-profile: sRGB;
-  rendering-intent: auto; }
+  color: #eee8d5;
+}
+.dark * {
+  color: #eee8d5;
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #93a1a1;
+  border-color: #839496;
+}
+.dark .bio .exp {
+  background: #073642;
+}
+.dark a, .dark a:active, .dark a:visited, .dark code.url {
+  color: #268bd2;
+}
 
 /*# sourceMappingURL=solarized.css.map */

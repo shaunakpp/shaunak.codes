@@ -1,9 +1,23 @@
 @import 'solarized';
+
 @mixin link-with-color($link-color){
   a {
     color: $link-color;
     text-decoration: none;
   }
+}
+
+@mixin colored-bullet-point($em-color){
+  .left:before {
+    background: $em-color;
+  }
+  em {
+    color: $em-color;
+    font-style: normal;
+  }
+}
+
+@mixin title(){
 }
 body {
   font-family: 'Source Code Pro', monospace;
@@ -30,7 +44,9 @@ h2 {
   a {
     margin: auto 1em auto 0;
   }
+  @include link-with-color($blue);
 }
+
 
 .intro {
   margin: 0 0 2em 0;
@@ -224,35 +240,16 @@ h2 {
   }
 }
 
-
 .job {
-  .left:before {
-    background: $green;
-  }
-  em {
-    color: $green;
-    font-style: normal;
-  }
+  @include colored-bullet-point($green);
 }
 
 .event {
-  .left:before {
-    background: $magenta;
-  }
-  em {
-    color: $magenta;
-    font-style: normal;
-  }
+  @include colored-bullet-point($magenta);
 }
 
 .fun {
-  .left:before {
-    background: $blue;
-  }
-  em {
-    color: $blue;
-    font-style: normal;
-  }
+  @include colored-bullet-point($blue);
 }
 
 .flash {
@@ -267,3 +264,4 @@ h2 {
     margin: auto 1.5em auto 0;
   }
 }
+
