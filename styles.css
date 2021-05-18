@@ -312,5 +312,14 @@ h2 {
     margin: auto 1.5em auto 0;
   }
 }
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: #268bd2;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
 
 /*# sourceMappingURL=styles.css.map */
