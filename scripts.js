@@ -18,11 +18,11 @@ function toggleDisplayMode(isDarkMode) {
   if (isDarkMode) {
     document.body.classList.add('dark');
     document.body.classList.remove('light');
-    toggleBtn.textContent = '[Light]'
+    toggleBtn.textContent = '[Light Mode]'
   } else {
     document.body.classList.add('light');
     document.body.classList.remove('dark');
-    toggleBtn.textContent = '[Dark]'
+    toggleBtn.textContent = '[Dark Mode]'
   }
 }
 
