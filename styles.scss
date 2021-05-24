@@ -1,32 +1,88 @@
 @import 'solarized';
 
-@mixin link-with-color($link-color){
-  a {
-    color: $link-color;
-    text-decoration: none;
+@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3)
+{
+    background-color:$rebase03;
+    color:$rebase2;
+    * { color:$rebase2; }
+    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
+    .bio .exp { background: $rebase02;}
+}
+
+@mixin bullets($name, $link-color) {
+  .#{$name} {
+    .left:before {
+        background: $link-color;
+    }
   }
 }
 
-@mixin colored-bullet-point($em-color){
-  .left:before {
-    background: $em-color;
+@mixin links($link) {
+  a, a:active, a:visited, code.url { color: $link; }
+  .flash {
+      color: $link !important;
   }
-  em {
-    color: $em-color;
-    font-style: normal;
+  .feather {
+      stroke: $link
   }
 }
 
-@mixin title(){
+@mixin title {
+  .title {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .8em 0;
+  }
+  .title:before {
+    content: '[+] ';
+  }
 }
+
+@mixin section {
+  margin: 0 0 2em 0;
+  .exp {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 2em 0;
+    }
+  }
+}
+
+:root {
+  color-scheme: light dark; /* both supported */
+}
+
 body {
   font-family: 'Source Code Pro', monospace;
   font-size: .8em;
   display: flex;
   justify-content: center;
-  background: $base3;
-  color: $base00;
+  a {
+    text-decoration: none;
+  }
 }
+
+.light {
+  @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
+  @include bullets("job", $green);
+  @include bullets("event", $magenta);
+  @include bullets("fun", $blue);
+  @include links($blue);
+}
+
+.dark  {
+  @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
+  @include bullets("job", $green);
+  @include bullets("event", $red);
+  @include bullets("fun", $cyan);
+  @include links($orange);
+}
+
 .container {
   max-width: 840px;
 }
@@ -44,55 +100,17 @@ h2 {
   a {
     margin: auto 1em auto 0;
   }
-  @include link-with-color($blue);
 }
-
 
 .intro {
-  margin: 0 0 2em 0;
-  @include link-with-color($blue);
-  .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0;
-  }
-  .title:before {
-    content: '[+] ';
-  }
-  .exp {
-    display: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li {
-      margin: 2em 0;
-    }
-  }
+  @include title();
+  @include section();
+
 }
 .changelog {
-  margin: 0 0 2em 0;
-  @include link-with-color($blue);
-  .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0;
-  }
-  .title:before {
-    content: '[+] ';
-  }
-  .exp {
-    display: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li {
-      margin: 2em 0;
-    }
-  }
+  @include title();
+  @include section();
+
   li {
     display: flex;
     justify-content: flex-start;
@@ -137,61 +155,11 @@ h2 {
     }
   }
 }
-.updates {
-  margin: 0 0 2em 0;
-  @include link-with-color($blue);
 
-  .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0;
-  }
-  .title:before {
-    content: '[+] ';
-  }
-  .exp {
-    display: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li {
-      margin: 2em 0;
-    }
-  }
-  .loading {
-    animation: blinker 1s linear infinite;
-    margin: 1em 0 0 0;
-    .hide {
-      display: none;
-    }
-  }
-}
 .bio {
-  margin: 0 0 2em 0;
-  @include link-with-color($blue);
-  .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0;
-  }
-  .title:before {
-    content: '[+] ';
-  }
+  @include title();
+  @include section();
   .exp {
-    display: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li {
-      margin: 2em 0;
-    }
-  }
-  .exp {
-    background: $base2;
     line-height: 1.8em;
     margin: 2em 0 0 0;
     padding: 0.8em 1.2em;
@@ -210,50 +178,19 @@ h2 {
   }
 }
 
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0.0;
   }
-}
-
-.end {
-  margin: 0 0 2em 0;
-  @include link-with-color($blue);
-  .title {
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: .8em 0;
-  }
-  .title:before {
-    content: '[+] ';
-  }
-  .exp {
-    display: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li {
-      margin: 2em 0;
-    }
-  }
-}
-
-.job {
-  @include colored-bullet-point($green);
-}
-
-.event {
-  @include colored-bullet-point($magenta);
-}
-
-.fun {
-  @include colored-bullet-point($blue);
-}
-
-.flash {
-  color: $blue !important;
 }
 
 @media (max-width: 600px) {
@@ -263,14 +200,4 @@ h2 {
   .links a {
     margin: auto 1.5em auto 0;
   }
-}
-
-.feather {
-  width: 24px;
-  height: 24px;
-  stroke: $blue;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
 }

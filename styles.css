@@ -1,20 +1,49 @@
-/* light is default mode, so pair with general html definition */
-html, .light {
+:root {
+  color-scheme: light dark;
+  /* both supported */
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+}
+body a {
+  text-decoration: none;
+}
+
+.light {
   background-color: #fdf6e3;
   color: #073642;
 }
-html *, .light * {
+.light * {
   color: #073642;
 }
-html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
   color: #586e75;
   border-color: #657b83;
 }
-html .bio .exp, .light .bio .exp {
+.light .bio .exp {
   background: #eee8d5;
 }
-html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
-  color: #268bd2;
+.light .job .left:before {
+  background: #859900;
+}
+.light .event .left:before {
+  background: #d33682;
+}
+.light .fun .left:before {
+  background: #2075B1;
+}
+.light a, .light a:active, .light a:visited, .light code.url {
+  color: #2075B1;
+}
+.light .flash {
+  color: #2075B1 !important;
+}
+.light .feather {
+  stroke: #2075B1;
 }
 
 .dark {
@@ -31,17 +60,23 @@ html a, html a:active, html a:visited, html code.url, .light a, .light a:active,
 .dark .bio .exp {
   background: #073642;
 }
-.dark a, .dark a:active, .dark a:visited, .dark code.url {
-  color: #268bd2;
+.dark .job .left:before {
+  background: #859900;
 }
-
-body {
-  font-family: "Source Code Pro", monospace;
-  font-size: 0.8em;
-  display: flex;
-  justify-content: center;
-  background: #fdf6e3;
-  color: #657b83;
+.dark .event .left:before {
+  background: #e86260;
+}
+.dark .fun .left:before {
+  background: #2aa198;
+}
+.dark a, .dark a:active, .dark a:visited, .dark code.url {
+  color: #d86f57;
+}
+.dark .flash {
+  color: #d86f57 !important;
+}
+.dark .feather {
+  stroke: #d86f57;
 }
 
 .container {
@@ -64,17 +99,9 @@ h2 {
 .links a {
   margin: auto 1em auto 0;
 }
-.links a {
-  color: #268bd2;
-  text-decoration: none;
-}
 
 .intro {
   margin: 0 0 2em 0;
-}
-.intro a {
-  color: #268bd2;
-  text-decoration: none;
 }
 .intro .title {
   cursor: pointer;
@@ -98,10 +125,6 @@ h2 {
 
 .changelog {
   margin: 0 0 2em 0;
-}
-.changelog a {
-  color: #268bd2;
-  text-decoration: none;
 }
 .changelog .title {
   cursor: pointer;
@@ -166,46 +189,8 @@ h2 {
   display: none;
 }
 
-.updates {
-  margin: 0 0 2em 0;
-}
-.updates a {
-  color: #268bd2;
-  text-decoration: none;
-}
-.updates .title {
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 0.8em 0;
-}
-.updates .title:before {
-  content: "[+] ";
-}
-.updates .exp {
-  display: none;
-}
-.updates ul {
-  list-style-type: none;
-  padding: 0;
-}
-.updates ul li {
-  margin: 2em 0;
-}
-.updates .loading {
-  animation: blinker 1s linear infinite;
-  margin: 1em 0 0 0;
-}
-.updates .loading .hide {
-  display: none;
-}
-
 .bio {
   margin: 0 0 2em 0;
-}
-.bio a {
-  color: #268bd2;
-  text-decoration: none;
 }
 .bio .title {
   cursor: pointer;
@@ -227,7 +212,6 @@ h2 {
   margin: 2em 0;
 }
 .bio .exp {
-  background: #eee8d5;
   line-height: 1.8em;
   margin: 2em 0 0 0;
   padding: 0.8em 1.2em;
@@ -243,66 +227,20 @@ h2 {
   display: block;
 }
 
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;
   }
 }
-.end {
-  margin: 0 0 2em 0;
-}
-.end a {
-  color: #268bd2;
-  text-decoration: none;
-}
-.end .title {
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 0.8em 0;
-}
-.end .title:before {
-  content: "[+] ";
-}
-.end .exp {
-  display: none;
-}
-.end ul {
-  list-style-type: none;
-  padding: 0;
-}
-.end ul li {
-  margin: 2em 0;
-}
-
-.job .left:before {
-  background: #859900;
-}
-.job em {
-  color: #859900;
-  font-style: normal;
-}
-
-.event .left:before {
-  background: #d33682;
-}
-.event em {
-  color: #d33682;
-  font-style: normal;
-}
-
-.fun .left:before {
-  background: #268bd2;
-}
-.fun em {
-  color: #268bd2;
-  font-style: normal;
-}
-
-.flash {
-  color: #268bd2 !important;
-}
-
 @media (max-width: 600px) {
   .changelog li .left {
     min-width: 160px;
@@ -311,15 +249,6 @@ h2 {
   .links a {
     margin: auto 1.5em auto 0;
   }
-}
-.feather {
-  width: 24px;
-  height: 24px;
-  stroke: #268bd2;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
